@@ -1,4 +1,4 @@
-import { Component, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
 
 @Component({
   selector: 'app-counter-page',
@@ -9,12 +9,23 @@ import { Component, signal } from "@angular/core";
       margin: 5px;
       width: 100px;
 
-  }`
+  }`,
+
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
+
 
 export class CounterPageComponent {
   counter = 10;
   counterSignal = signal(10); //se inicializa en 10
+
+  constructor() {
+    setInterval(() => {
+      this.incrementar(1);
+      console.log('Click');
+  }, 2000);
+  }
 
 
   incrementar(value: number) {
