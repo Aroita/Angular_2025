@@ -2,14 +2,14 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: 'app-counter-page',
-  template: `
-  <h1>Counter: {{counter}}</h1>
-  <button (click)="incrementar(1)">+1</button>
-  <button (click)="restarle(1)">-1</button>
+  templateUrl: './counter-page.component.html',
+  styles: `
+    button {
+      padding: 5px;
+      margin: 5px;
+      width: 100px;
 
-
-  `,
-  styles: []
+  }`
 })
 
 export class CounterPageComponent {
@@ -17,11 +17,15 @@ export class CounterPageComponent {
   counter = 10;
 
   incrementar(value: number) {
-    this.counter += value;
+    this.counter += value;  //va incrementado en 1 el valor de counter
   }
 
   restarle(value: number) {
-    this.counter -= value;
+    this.counter -= value;  //va decrementando en -1 el valor de counter
+  }
+
+  resetear() {
+    this.counter = 10;  //resetea el valor de counter a 10
   }
 
 }
