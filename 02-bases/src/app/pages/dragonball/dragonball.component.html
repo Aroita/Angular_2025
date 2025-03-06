@@ -2,8 +2,8 @@
 <section class="row">
   <div class="col-12 col-sm-6">
     <h5>Agregar:</h5>
-    <input type="text" class="from-control" placeholder="Nombre">
-    <input type="email" class="from-control mt-2" placeholder="Email">
+    <input type="text" class="from-control" placeholder="Nombre" />
+    <input type="email" class="from-control mt-2" placeholder="Email" />
 
     <button class="mt-2 btn btn-primary">Agregar</button>
   </div>
@@ -13,26 +13,26 @@
     <ul>
       <!--para mostrar los personajes de signal-->
       @for (character of characters(); track character.id; let idx = $index) {
-        <li>
 
-          <span>
-            {{idx + 1}} - {{ character.name }}
-          </span>
-          <!--UNA CONDICION CON LA CLASE text-danger: si caracter power es mayor a 9000 se aplica la clase(texto en rojo)-->
-          <strong
+      <!--si el poder del personaje es mayor a 500 se muestra en la lista -->
+      @if(character.power > 500) {
+
+      <li>
+        <span> {{ idx + 1 }} - {{ character.name }} </span>
+        <!--UNA CONDICION CON LA CLASE text-danger: si caracter power es mayor a 9000 se aplica la clase(texto en rojo)-->
+        <strong
           [class.text-danger]="character.power > 9000"
-          [class.text-info]="character.power <=  9000"
-          >
+          [class.text-info]="character.power <= 9000"
+        >
           ( power: {{ character.power }} )
-          </strong>
+        </strong>
+      </li>
+    } @else {
+      <li><strong>No se vera este heroe porq tiene menos de 500 pt de vida</strong></li>
 
-        </li>
-
-      }
-
-
+    }
+     <!-- cierra if -->
+    }<!--  cierra for -->
     </ul>
-
-
   </div>
 </section>

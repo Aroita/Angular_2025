@@ -33,8 +33,8 @@ export class DragonballComponent {
     { id: 5, name: 'Trunks', power: 9000 },
     { id: 6, name: 'Goten', power: 8000 },
     { id: 7, name: 'Krillin', power: 5000 },
-    { id: 8, name: 'Yamcha', power: 4000 },
-    { id: 9, name: 'Tien', power: 4000 },
+    { id: 8, name: 'Yamcha', power: 500 },  //añadire,os un if a Yamcha
+    { id: 9, name: 'Tien', power: 400 },
     { id: 10, name: 'Chaoz', power: 2000 },
 
   ]);
