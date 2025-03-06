@@ -1,40 +1,18 @@
 <p>dragonball works!</p>
-<section class="row">
+
+<div class="row">
   <div class="col-12 col-sm-6">
-    <!--añadimos signal name-->
-    <h5>Agregar: {{ name() }}</h5>
+    <!--AÑADIR component dragonball-chareacter-add-->
+    <app-character-app
+    (newCharacter)="addCharacter($event)"
 
-    <!--  añadimos el [value] del input con el nombre del personaje en signal -->
-      <!-- #txtName hace referencia a ese input y para que el evento (change) coga su value que es signal name() -->
-    <input
-    type="text"
-    class="form-control"
-    placeholder="Nombre"
-   [value]="name() "
-   (change)="name.set(txtName.value)"
-   (input)="name.set(txtName.value)"
-   #txtName
     />
-
-    <h5>{{ power() }}</h5>
-
-    <input
-    type="number"
-    class="form-control mt-2"
-    placeholder="power"
-    [value]="power()"
-    (input)="power.set(+txtPower.value)"
-    #txtPower
-    />
-
-    <button (click)="addCharacter()" class="mt-2 btn btn-primary">Agregar</button>
   </div>
-
   <div class="col-12 col-sm-6">
-<!-------------------------------- AÑADIMOS COMPONENTE DENTRO E IMPORTARLO EN ESTE .TS ---------------------------------->
-    <dragonball-character-list [characters]="characters()"/>
-
-
-
+    <!-------------------------------- AÑADIMOS COMPONENTE DENTRO E IMPORTARLO EN ESTE .TS ---------------------------------->
+    <dragonball-character-list
+      listName="DragonBall Super"
+      [characters]="characters()"
+    />
   </div>
-</section>
+</div>

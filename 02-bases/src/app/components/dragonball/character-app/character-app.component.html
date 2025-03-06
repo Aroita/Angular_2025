@@ -1,0 +1,28 @@
+
+    <!--añadimos signal name-->
+    <h5>Agregar: {{ name() }}</h5>
+
+    <!--  añadimos el [value] del input con el nombre del personaje en signal -->
+      <!-- #txtName hace referencia a ese input y para que el evento (change) coga su value que es signal name() -->
+    <input
+    type="text"
+    class="form-control"
+    placeholder="Nombre"
+   [value]="name() "
+   (change)="name.set(txtName.value)"
+   (input)="name.set(txtName.value)"
+   #txtName
+    />
+
+    <h5>{{ power() }}</h5>
+
+    <input
+    type="number"
+    class="form-control mt-2"
+    placeholder="power"
+    [value]="power()"
+    (input)="power.set(+txtPower.value)"
+    #txtPower
+    />
+
+    <button (click)="addCharacter()" class="mt-2 btn btn-primary">Agregar</button>
