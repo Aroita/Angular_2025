@@ -5,6 +5,7 @@ import { HeroPageComponent } from './pages/hero/hero-page.component';
 // import { SkillsComponent } from './pages/skills/skills.component';
 // import { ContactComponent } from './pages/contact/contact.component';
 import { DragonballComponent } from './pages/dragonball/dragonball.component';
+import { DragonballSuperPageComponent } from './pages/dragonball-super/dragonball-super-page.component';
 
 
 export const routes: Routes = [
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'dragonball',
     component: DragonballComponent
+  },
+  {
+    path: 'dragonball-super',
+    component: DragonballSuperPageComponent
   },
 
   // {

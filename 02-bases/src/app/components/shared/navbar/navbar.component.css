@@ -24,7 +24,7 @@ nav a.active {
   height: 5px;
   width: 100%;
   border: none;
-  position: fixed;
+  margin: 0;
   top: 28px;
   left: 0;
   transition: background-color 0.5s ease-in-out;
