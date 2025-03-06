@@ -14,13 +14,17 @@
       <!--para mostrar los personajes de signal-->
       @for (character of characters(); track character.id; let idx = $index) {
         <li>
-         
+
           <span>
             {{idx + 1}} - {{ character.name }}
           </span>
-          <span class="text-danger">
-          (  {{ character.power }} )
-          </span>
+          <!--UNA CONDICION CON LA CLASE text-danger: si caracter power es mayor a 9000 se aplica la clase(texto en rojo)-->
+          <strong
+          [class.text-danger]="character.power > 9000"
+          [class.text-info]="character.power <=  9000"
+          >
+          ( power: {{ character.power }} )
+          </strong>
 
         </li>
 

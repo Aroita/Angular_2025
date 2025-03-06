@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component, computed, signal } from '@angular/core';
 
-
+//1. declarar la interface de personajes de dragonball
 interface Character {
   id: number;
   name: string;
@@ -23,7 +24,7 @@ interface Character {
 
 export class DragonballComponent {
 
-  //inicializar el array de personajes de dragonball interface con signal
+  //2- inicializar el array de personajes de dragonball interface con signal
   characters = signal<Character[]>([
     { id: 1, name: 'Goku', power: 15000 },
     { id: 2, name: 'Vegeta', power: 12000 },
@@ -37,5 +38,11 @@ export class DragonballComponent {
     { id: 10, name: 'Chaoz', power: 2000 },
 
   ]);
+
+
+
+
+
+
 
 }
