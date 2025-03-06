@@ -1,0 +1,33 @@
+nav {
+  background-color: #212121;
+  color : white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* activa color al cliquear y añadir al html nav: [routerLinkActiveOptions]="{exact:true}" para que cambie*/
+nav a.active {
+  color: gold;
+  text-decoration: underline;
+}
+
+
+.dynamic-line
+ {
+  height: 5px;
+  width: 100%;
+  border: none;
+  position: fixed;
+  top: 28px;
+  left: 0;
+  transition: background-color 0.5s ease-in-out;
+
+}
+

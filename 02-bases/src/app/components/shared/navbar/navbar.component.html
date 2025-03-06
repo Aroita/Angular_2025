@@ -1,24 +1,17 @@
-<style>
-  nav {
-    background-color: #212121;
-    color : white;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
+<style></style>
 
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-</style>
-
-<nav >
-  <a routerLink="/">Contador</a>
-
-  <a [routerLink]="['/hero']">Hero</a>
-
-
-
+<nav>
+  <!--IMPORTAR ROUTERLINK AL TS NAVBAR
+  añadir para q el color hove cambie -> [routerLinkActiveOptions]="{exact:true}"-->
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >About</a
+  >
+  <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+  <a [routerLink]="['/project']" [routerLinkActive]="'active'">Project</a>
+  <a [routerLink]="['/skills']" [routerLinkActive]="'active'">Skills</a>
+  <a [routerLink]="['/contact']" [routerLinkActive]="'active'">Contact</a>
 </nav>
+<hr [style.background-color]="color" class="dynamic-line" />
