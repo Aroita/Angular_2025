@@ -4,7 +4,7 @@
   <div class="col-12 col-sm-6">
     <!--AÑADIR component dragonball-chareacter-add-->
     <app-character-app
-    (newCharacter)="addCharacter($event)"
+    (newCharacter)="DragonballService.addCharacter($event)"
 
     />
   </div>
@@ -12,7 +12,7 @@
     <!-------------------------------- AÑADIMOS COMPONENTE DENTRO E IMPORTARLO EN ESTE .TS ---------------------------------->
     <dragonball-character-list
       listName="DragonBall Super"
-      [characters]="characters()"
+      [characters]="DragonballService.characters()"  
     />
   </div>
 </div>

@@ -1,7 +1,9 @@
 
-import { Component, signal} from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CharacterListComponent } from "../../components/dragonball/character-list/character-list.component";
 import { CharacterAppComponent } from '../../components/dragonball/character-app/character-app.component';
+//import { DragonballComponent } from '../dragonball/dragonball.component';
+import { DragonballService } from '../../services/dragonball.service';
 
 //1. declarar la interface de personajes de dragonball
 interface Character {
@@ -9,8 +11,6 @@ interface Character {
   name: string;
   power: number;
 }
-
-
 
 @Component({
   selector: 'dragonball-super',
@@ -20,22 +20,22 @@ interface Character {
 })
 
 
-
-
-
-
 export class DragonballSuperPageComponent {
+
+  //inyectar service de dragonball
+  public DragonballService = inject(DragonballService);
+
+  //otra forma de inyectar el servicio de dragonball y comentar lo que habia antes
+  // constructor(public dragonballService: DragonballService) {
+
+  // }
+
   //public dragonballService = inject(DragonballService);
 
-  addCharacter(character: Character) {
-   this.characters.update((list) => [...list, character]);
-  }
+  // addCharacter(character: Character) {
+  //  this.characters.update((list) => [...list, character]);
+  // }
     // your code here
-
-
-
-
-
 
 
   //añadir signal a name y power
@@ -43,12 +43,12 @@ export class DragonballSuperPageComponent {
   // power = signal(0);
 
   //2- inicializar el array de personajes de dragonball interface con signal
-  characters = signal<Character[]>([
-    { id: 1, name: 'Goku', power: 15000 },
-    { id: 2, name: 'Vegeta', power: 12000 },
+//   characters = signal<Character[]>([
+//     { id: 1, name: 'Goku', power: 15000 },
+//     { id: 2, name: 'Vegeta', power: 12000 },
 
 
- ]);
+//  ]);
 
 }
 
