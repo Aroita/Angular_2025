@@ -3,6 +3,8 @@ import { SideMenuHeaderComponent } from './side-menu-header/side-menu-header.com
 import { SideMenuOptionsComponent } from './side-menu-options/side-menu-options.component';
 
 
+
+
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
