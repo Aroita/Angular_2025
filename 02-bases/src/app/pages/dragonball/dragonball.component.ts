@@ -1,5 +1,7 @@
 import { NgClass } from '@angular/common';
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
+import { DragonballService } from '../../services/dragonball.service';
+
 
 //1. declarar la interface de personajes de dragonball
 interface Character {
@@ -20,9 +22,8 @@ interface Character {
 
 
 
-
-
 export class DragonballComponent {
+  public DragonballService = inject(DragonballService);
 
   //añadir signal a name y power
   name = signal('');
