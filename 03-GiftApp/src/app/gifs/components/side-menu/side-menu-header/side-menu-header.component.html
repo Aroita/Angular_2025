@@ -1,9 +1,11 @@
 <p class="text-red-500">
   side-menu-header works!
 </p>
+<!-- import { environment} from '@environments/environment';-->
 <div id="logo" class="my-4 px-6">
-  <h1 class="text-lg md:text-2xl font-bold text-white">Dash<span class="text-blue-500">8</span>.</h1>
-  <p class="text-slate-500 text-sm">Manage your actions and activities</p>
+  <h1 class="text-lg md:text-2xl font-bold text-white">{{ envs.companyName }}
+    <span class="text-blue-500">8</span>.</h1>
+  <p class="text-slate-500 text-sm">{{ envs.companyName2 }}</p>
  </div>
  <div id="profile" class="px-6 py-10">
   <p class="text-slate-500">Welcome back,</p>
@@ -16,3 +18,4 @@
       </span>
       </a>
  </div>
+ <br>

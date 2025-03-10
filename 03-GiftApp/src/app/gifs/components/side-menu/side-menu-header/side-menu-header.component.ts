@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component} from '@angular/core';
+//import { RouterOutlet } from '@angular/router';
+//import { environment } from '../../../../../environments/environment.development';
+import { environment} from '@environments/environment';
+
+
 
 @Component({
   selector: 'app-side-menu-header',
@@ -8,11 +12,8 @@ import { RouterOutlet } from '@angular/router';
 
 })
 export class SideMenuHeaderComponent {
-  
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  //crear property para almacenar el objeto environment y poder usarlo en el template
+  envs = environment;
 
 }
